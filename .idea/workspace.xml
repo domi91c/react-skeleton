@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50a278e8-3f90-4106-a12a-8b965bbb90af" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jscs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pako/doc/index.html" afterPath="$PROJECT_DIR$/node_modules/pako/doc/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/List.jsx" afterPath="$PROJECT_DIR$/src/components/List.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ListManager.jsx" afterPath="$PROJECT_DIR$/src/components/ListManager.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.jsx" afterPath="$PROJECT_DIR$/src/main.jsx" />
-    </list>
+    <list default="true" id="50a278e8-3f90-4106-a12a-8b965bbb90af" name="Default" comment="" />
     <ignored path="react-skeleton.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -294,12 +282,12 @@
       <workItem from="1459900550610" duration="303000" />
       <workItem from="1459904192224" duration="429000" />
       <workItem from="1459905317004" duration="8445000" />
-      <workItem from="1460072839111" duration="3255000" />
+      <workItem from="1460072839111" duration="3394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24930000" />
+    <option name="totallyTimeSpent" value="25069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="23" width="960" height="1053" extended-state="0" />
