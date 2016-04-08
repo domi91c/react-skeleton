@@ -19041,6 +19041,11 @@ var ListItem = require('./ListItem.jsx');
 var List = React.createClass({
   displayName: 'List',
 
+
+  propTypes: {
+    items: React.PropTypes.array
+  },
+
   render: function () {
 
     var createItem = function (text, index) {
@@ -19082,11 +19087,13 @@ var ListManager = React.createClass({
   displayName: 'ListManager',
 
   getInitialState: function () {
-    return { items: ['hello', 'world', 'click', 'me'], newItemText: 'peenor' };
+    return {
+      items: ['hello', 'world', 'click', 'me'],
+      newItemText: 'peenor'
+    };
   },
 
   onChange: function (e) {
-
     this.setState({ newItemText: e.target.value });
   },
 
@@ -19098,28 +19105,53 @@ var ListManager = React.createClass({
   },
 
   render: function () {
+
+    var divStyle = {
+      marginLeft: 10,
+      color: purple
+    };
     return React.createElement(
       'div',
-      { className: 'col-md-4' },
+      { style: divStyle, className: 'col-sm-12' },
       React.createElement(
         'div',
-        { className: 'card ' },
+        { className: 'container' },
         React.createElement(
-          'h3',
-          { className: 'card-header' },
-          this.props.title
-        ),
-        React.createElement(
-          'form',
-          { onSubmit: this.handleSubmit },
-          React.createElement('input', { onChange: this.onChange, value: this.state.newItemText }),
+          'div',
+          { className: 'card  card-primary-outline' },
           React.createElement(
-            'button',
-            { className: 'btn-danger' },
-            'Add'
-          )
-        ),
-        React.createElement(List, { items: this.state.items })
+            'h3',
+            { className: 'card-header bg-primary' },
+            this.props.title
+          ),
+          React.createElement(
+            'div',
+            { className: 'card-block row' },
+            React.createElement(
+              'form',
+              { style: divStyle, onSubmit: this.handleSubmit,
+                className: 'form-inline' },
+              React.createElement(
+                'div',
+                { className: 'col-sm-4' },
+                React.createElement('input', {
+                  className: 'form-control',
+                  onChange: this.onChange,
+                  value: this.state.newItemText })
+              ),
+              React.createElement(
+                'div',
+                { className: 'col-sm-1' },
+                React.createElement(
+                  'button',
+                  { className: 'btn btn-primary' },
+                  'Add'
+                )
+              )
+            )
+          ),
+          React.createElement(List, { items: this.state.items })
+        )
       )
     );
   }
@@ -19133,5 +19165,7 @@ var ReactDOM = require('react-dom');
 var ListManager = require('./components/ListManager.jsx');
 
 ReactDOM.render(React.createElement(ListManager, { title: 'Ingredients' }), document.getElementById('ingredients'));
+ReactDOM.render(React.createElement(ListManager, { title: 'ToDo' }), document.getElementById('todo'));
+ReactDOM.render(React.createElement(ListManager, { title: 'Christmas' }), document.getElementById('christmas'));
 
 },{"./components/ListManager.jsx":161,"react":158,"react-dom":29}]},{},[162]);
