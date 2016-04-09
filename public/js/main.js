@@ -19106,52 +19106,51 @@ var ListManager = React.createClass({
 
   render: function () {
 
+    var buttonStyle = {
+      borderBottomLeftRadius: 0,
+      borderTopLeftRadius: 0
+    };
     var divStyle = {
-      marginLeft: 10,
-      color: purple
+      marginLeft: 10
     };
     return React.createElement(
       'div',
       { style: divStyle, className: 'col-sm-12' },
       React.createElement(
         'div',
-        { className: 'container' },
+        { className: 'card  card-primary-outline' },
+        React.createElement(
+          'h3',
+          { className: 'card-header bg-primary' },
+          this.props.title
+        ),
         React.createElement(
           'div',
-          { className: 'card  card-primary-outline' },
+          { className: 'card-block row' },
           React.createElement(
-            'h3',
-            { className: 'card-header bg-primary' },
-            this.props.title
-          ),
-          React.createElement(
-            'div',
-            { className: 'card-block row' },
+            'form',
+            { style: divStyle, onSubmit: this.handleSubmit,
+              className: 'form-inline' },
             React.createElement(
-              'form',
-              { style: divStyle, onSubmit: this.handleSubmit,
-                className: 'form-inline' },
+              'div',
+              { className: 'col-sm-8' },
+              React.createElement('input', {
+                className: 'form-control',
+                onChange: this.onChange,
+                value: this.state.newItemText })
+            ),
+            React.createElement(
+              'div',
+              { className: 'col-sm-4' },
               React.createElement(
-                'div',
-                { className: 'col-sm-4' },
-                React.createElement('input', {
-                  className: 'form-control',
-                  onChange: this.onChange,
-                  value: this.state.newItemText })
-              ),
-              React.createElement(
-                'div',
-                { className: 'col-sm-1' },
-                React.createElement(
-                  'button',
-                  { className: 'btn btn-primary' },
-                  'Add'
-                )
+                'button',
+                { style: buttonStyle, className: 'btn btn-primary' },
+                'Add'
               )
             )
-          ),
-          React.createElement(List, { items: this.state.items })
-        )
+          )
+        ),
+        React.createElement(List, { items: this.state.items })
       )
     );
   }
